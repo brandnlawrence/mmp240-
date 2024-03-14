@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: white;
 }
 #wrapper {
     width: 1200px
@@ -8,9 +8,25 @@ body{
     padding: 1em;
 }
 header{
-    background-color: black;
-    background-image: 
+    
+    background-color: rgba(238, 237, 237, 0.859);
+    background-image: url("images/viola.jpeg");
     background-repeat: no-repeat;
     background-position: top right;
+    padding:2em;
 
+}
+.banner-text{
+    font-size: 1.2 rem;
+    width: 30%;
+    color:black
+}
+.btn{
+    display: block;
+    background-color: darkred;
+    color:white;
+    padding:10px;
+    width:5em;
+    text-align: center;
+    text-transform: uppercase;
 }
