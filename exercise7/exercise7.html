@@ -6,10 +6,22 @@
 
     <style>
     /* Type CSS code here */
+    .flex-item .lead{
+      flex:2 0 auto;
+      text-align: center;
+      width:200px;
+      margin: 1%;
+    }
 
     #wrapper{
       max-width:1200px;
       margin:0 auto;
+    }
+    .flex-container{
+      display: flex;
+      flex-direction: row;
+      background-color: black;
+      color: white;
     }
 
     .flex-item{
@@ -18,10 +30,12 @@
       padding:5px;
       border-radius: 10px;
       margin:0.5em;
+      flex: 1 0 0;
     }
 
     .lead{
       border:none;
+      flex: 2 0 0;
     }
 
     .img-responsive{
