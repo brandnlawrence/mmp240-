@@ -1,0 +1,346 @@
+/* Table of Contents
+
+1. resets - reset browser's defaults
+2. page level styles
+3. typography
+4. utility styles
+5. header and top navigation
+6. program navigation
+7. homepage content
+8. program pages
+9. media queries for larger viewports
+
+*/
+
+/* ************** 1.resets ************ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 2. Page level styles */
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5em;
+    margin: 1rem;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+input {
+    border: solid 1px black;
+    padding: 3px;
+}
+
+/* 3. Tpography */
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1em;
+}
+
+
+/* 4. Utilities */
+
+.flex-containter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.larger-text {
+    font-size: larger;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.float-right {
+    float: right;
+}
+
+/* ************** 5. header and top navigation ************ */
+
+header {
+    position: relative;
+}
+
+#top-menu {
+    display: none;
+    padding: 0.5em;
+    border: solid 1px black;
+    background-color: white;
+    clear: right;
+    position: absolute;
+    right: 0;
+    top: 28px;
+}
+
+#top menu ul {
+    list-style-type: none;
+}
+
+.material-symbols-outlined {
+    font-size: 36px;
+}
+
+.show-menu {
+    background-color: none;
+    border: none;
+}
+
+/* ************** 6.program navigation ************ */
+
+nav ul {
+    list-style-type: none;
+}
+
+li.dropdown {
+    border-bottom: solid 1px black;
+}
+
+li.dropdown ul {
+    display: none;
+}
+
+li.dropdown:hover ul {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown li a {
+    color: gray;
+}
+
+/* ************** 7. homepage content ************ */
+
+.banner {
+    padding: 6em 2em;
+    background-image: url(###);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    text-shadow: 2px 2px 2px black;
+    background-color: rgba(0, 0, 0.5);
+}
+
+/* ************** 8. program pages ************ */
+
+.program-title {
+    margin-top: 1em;
+}
+
+.program-layout a {
+    color: black;
+    text-decoration: none;
+}
+
+.program-layout h2,
+.program-layout h3,
+.program-layout h4 {
+    font-size: smaller;
+    margin: 0;
+}
+
+.program-layout h3 {
+    text-transform: uppercase;
+}
+
+.program-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1em;
+
+}
+
+.card {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30rem;
+    transition-property: background-color box-shadow transform;
+    transition-duration: 0.3s;
+}
+
+.card:hover {
+    background-color: rgb(206, 179, 206);
+    box-shadow: 5px 5px 5px #888;
+    transform: scale(1.05);
+}
+
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-link {
+    color: black;
+    text-decoration: none;
+}
+
+.card {
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30rem;
+    transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-body {
+    margin: 1em;
+}
+
+.card-body p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+/* ************** 9. media queries for larger viewports ************ */
+
+.search-programs {
+    min-height: 8em;
+    border: solid 1px gray;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.hero-banner {
+    min-height: 12em;
+    background-color: teal;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.events img {
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+
+    .program-nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .program-nav li {
+        width: 30%;
+        position: relative;
+    }
+
+    .program-nav li li {
+        width: 100%;
+    }
+
+    .show-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        display: inline;
+        margin-right: 2em;
+    }
+
+    .layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 1em;
+    }
+
+    .drowpdown ul {
+        display: block;
+        position: absolute;
+        background-color: white;
+        border: solid 1px black;
+        padding: 5px;
+        width: 100%;
+    }
+
+    /* main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2em;
+    } */
+
+    .news {
+        grid-column-start: 1 span 2;
+    }
+
+    .events {
+        grid-column-start: 4;
+    }
+
+    .program {
+        display: grid;
+    }
+
+    .program-layout {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
+
+
+    #top-menu {
+        display: flex;
+        padding: 0.5em;
+        border: none;
+        position: static;
+    }
+
+    #top menu ul {
+        display: flex;
+    }
+
+    #top-menu li {
+        margin-right: 1em;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
+
+/*closing media query*/

@@ -30,3 +30,14 @@ header{
     text-align: center;
     text-transform: uppercase;
 }
+
+
+.flex-layout{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30%;
+    margin: 1em;
+}
