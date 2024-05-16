@@ -1,43 +1,110 @@
-body{
+body {
     background-color: white;
 }
+
 #wrapper {
-    width: 1200px
-    margin-left: auto;
-    margin-right: 
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the wrapper */
     padding: 1em;
 }
-header{
-    
+
+header {
     background-color: rgba(238, 237, 237, 0.859);
     background-image: url("images/viola.jpeg");
     background-repeat: no-repeat;
     background-position: top right;
-    padding:2em;
+    background-size: 100% 100%;
+    padding: 2em;
+}
 
-}
-.banner-text{
-    font-size: 1.2 rem;
+.banner-text {
+    font-size: 1.2rem;
     width: 30%;
-    color:black
+    color: black;
 }
-.btn{
+
+.button:hover {
+    background-color: blue;
+}
+
+.btn {
     display: block;
     background-color: darkred;
-    color:white;
-    padding:10px;
-    width:5em;
+    color: white;
+    padding: 10px;
+    width: 5em;
+    text-decoration: none;
     text-align: center;
     text-transform: uppercase;
 }
 
-
-.flex-layout{
-    display: flex;
-    flex-wrap: wrap;
+footer {
+    clear: both;
+    font-size: small;
+    color: darkred;
+    padding-left: 5px;
 }
 
-.card{
-    width: 30%;
-    margin: 1em;
+nav{
+    background-color: #ccc;
+    padding-block: 2px;
+}
+
+nav a{
+    color:black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color:blue;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1em;
+    padding-left: 3em;
+}
+
+/* Grid setup for episodes */
+.episodes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates exactly 4 columns */
+    grid-gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.episode {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.episode img {
+    width: 100%; /* Full width of the box */
+    height: auto;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 15px; /* Space between image and text */
+}
+
+.episode-info {
+    padding-top: 15px; /* Padding above the text */
+}
+
+@media (max-width: 1024px) {
+    .episodes-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .episodes-container {
+        grid-template-columns: 1fr; 
+    }
 }

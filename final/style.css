@@ -1,26 +1,9 @@
-/* Table of Contents
-
-1. resets - reset browser's defaults
-2. page level styles
-3. typography
-4. utility styles
-5. header and top navigation
-6. program navigation
-7. homepage content
-8. program pages
-9. media queries for larger viewports
-
-*/
-
-/* ************** 1.resets ************ */
 
 * {
     margin: 0;
     padding: 0;
     border: 0;
 }
-
-/* 2. Page level styles */
 
 body {
     font-family: sans-serif;
@@ -38,7 +21,6 @@ input {
     padding: 3px;
 }
 
-/* 3. Tpography */
 p,
 h1,
 h2,
@@ -60,8 +42,6 @@ h1 {
 }
 
 
-/* 4. Utilities */
-
 .flex-containter {
     display: flex;
     justify-content: space-between;
@@ -79,10 +59,10 @@ h1 {
     float: right;
 }
 
-/* ************** 5. header and top navigation ************ */
-
 header {
-    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #top-menu {
@@ -109,8 +89,6 @@ header {
     border: none;
 }
 
-/* ************** 6.program navigation ************ */
-
 nav ul {
     list-style-type: none;
 }
@@ -134,17 +112,24 @@ li.dropdown:hover ul {
     text-decoration: none;
 }
 
+.dropdown li a:hover {
+    color:blue;
+}
+
 .dropdown li a {
     color: gray;
 }
-
-/* ************** 7. homepage content ************ */
 
 .banner {
     padding: 6em 2em;
     background-image: url(###);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+h3 img {
+    max-height: 50vh;
+    display:flex;
 }
 
 .banner a {
@@ -155,7 +140,15 @@ li.dropdown:hover ul {
     background-color: rgba(0, 0, 0.5);
 }
 
-/* ************** 8. program pages ************ */
+.menu-bar .menu-item a {
+    text-decoration: none;
+    color:black;
+}
+
+.menu-bar .menu-item a:hover {
+    text-decoration: underline;
+    color:brown;
+}
 
 .program-title {
     margin-top: 1em;
@@ -232,8 +225,6 @@ li.dropdown:hover ul {
     font-size: small;
 }
 
-/* ************** 9. media queries for larger viewports ************ */
-
 .search-programs {
     min-height: 8em;
     border: solid 1px gray;
@@ -253,6 +244,10 @@ li.dropdown:hover ul {
     width: 100%;
 }
 
+footer {
+    padding-top: 5rem;
+    text-align: center;
+}
 
 @media (min-width: 768px) {
 
@@ -298,12 +293,6 @@ li.dropdown:hover ul {
         width: 100%;
     }
 
-    /* main{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2em;
-    } */
-
     .news {
         grid-column-start: 1 span 2;
     }
@@ -342,5 +331,3 @@ li.dropdown:hover ul {
         display: none;
     }
 }
-
-/*closing media query*/
